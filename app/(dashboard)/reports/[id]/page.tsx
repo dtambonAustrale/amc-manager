@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { PageHeader } from '@/components/ui/page-header'
 import { formatDate } from '@/lib/utils'
 import { REPORT_TYPE_LABELS, REPORT_STATUS_LABELS, REPORT_VISIBILITY_LABELS } from '@/lib/labels'
-import { FileText, Eye, User, Calendar, FolderOpen } from 'lucide-react'
+import { FileText, Eye, User, Calendar, FolderOpen, Printer } from 'lucide-react'
 import Link from 'next/link'
 import type { Database } from '@/types/database'
 
@@ -65,6 +65,12 @@ export default async function ReportDetailPage({ params }: Props) {
                   <Button variant="secondary" size="sm">Modifier</Button>
                 </Link>
               ) : null}
+              <Link href={`/reports/${id}/print`} target="_blank">
+                <Button variant="ghost" size="sm">
+                  <Printer size={13} />
+                  Imprimer
+                </Button>
+              </Link>
             </div>
           }
         />
