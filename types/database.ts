@@ -37,6 +37,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['profiles']['Row'], 'id' | 'created_at' | 'updated_at'>
         Update: Partial<Database['public']['Tables']['profiles']['Insert']>
+        Relationships: []
       }
       clients: {
         Row: {
@@ -58,6 +59,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['clients']['Row'], 'id' | 'created_at' | 'updated_at'>
         Update: Partial<Database['public']['Tables']['clients']['Insert']>
+        Relationships: []
       }
       cases: {
         Row: {
@@ -79,6 +81,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['cases']['Row'], 'id' | 'created_at' | 'updated_at'>
         Update: Partial<Database['public']['Tables']['cases']['Insert']>
+        Relationships: []
       }
       payments: {
         Row: {
@@ -97,6 +100,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['payments']['Row'], 'id' | 'created_at' | 'updated_at'>
         Update: Partial<Database['public']['Tables']['payments']['Insert']>
+        Relationships: []
       }
       appointments: {
         Row: {
@@ -115,6 +119,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['appointments']['Row'], 'id' | 'created_at' | 'updated_at'>
         Update: Partial<Database['public']['Tables']['appointments']['Insert']>
+        Relationships: []
       }
       appointment_participants: {
         Row: {
@@ -123,6 +128,7 @@ export interface Database {
         }
         Insert: Database['public']['Tables']['appointment_participants']['Row']
         Update: Partial<Database['public']['Tables']['appointment_participants']['Row']>
+        Relationships: []
       }
       reports: {
         Row: {
@@ -140,6 +146,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['reports']['Row'], 'id' | 'created_at' | 'updated_at'>
         Update: Partial<Database['public']['Tables']['reports']['Insert']>
+        Relationships: []
       }
       documents: {
         Row: {
@@ -154,6 +161,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['documents']['Row'], 'id' | 'created_at'>
         Update: Partial<Database['public']['Tables']['documents']['Insert']>
+        Relationships: []
       }
       activity_logs: {
         Row: {
@@ -167,6 +175,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['activity_logs']['Row'], 'id' | 'created_at'>
         Update: never
+        Relationships: []
       }
       email_logs: {
         Row: {
@@ -181,6 +190,7 @@ export interface Database {
         }
         Insert: Omit<Database['public']['Tables']['email_logs']['Row'], 'id' | 'created_at'>
         Update: never
+        Relationships: []
       }
     }
     Views: Record<string, never>

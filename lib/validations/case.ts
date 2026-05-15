@@ -14,4 +14,4 @@ export const caseSchema = z.object({
   notes: z.string().optional().nullable(),
 })
 
-export type CaseFormData = z.infer<typeof caseSchema>
+export type CaseFormData = z.output<typeof caseSchema>

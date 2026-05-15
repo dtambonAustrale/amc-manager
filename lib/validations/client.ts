@@ -22,4 +22,4 @@ export const clientSchema = z.object({
   path: ['first_name'],
 })
 
-export type ClientFormData = z.infer<typeof clientSchema>
+export type ClientFormData = z.output<typeof clientSchema>
